@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #unique-element {
     color: blue;
     background-color: rgb(170, 109, 72);    
@@ -7,14 +6,4 @@
 .shared-class {
     color: green;
     background-color: rgba(247, 217, 45, 0.995);
-=======
-#unique-element {
-    color: blue;
-    background-color: rgb(170, 109, 72);    
-}
-
-.shared-class {
-    color: green;
-    background-color: rgba(247, 217, 45, 0.995);
->>>>>>> 642734144e1045954e26687f17c269435349dd7a
 }
