@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Task 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        :root {
+            --pricolor: beige;
+            --seccolor: rgb(16, 16, 146);
+            --text-color: rgb(185, 115, 65);
+            --text-hov-color: rgb(143, 94, 59);
+        }
+
+        body {
+            background-color: var(--pricolor);
+        }
+
+        .nav {
+            background-color: var(--seccolor)
+        }
+
+        .nav ul {
+            display: flex;
+            padding-left: 8px;
+        }
+
+        .nav ul li {
+            padding: 20px 15px 20px 20px;
+            margin: 5px;
+            list-style: none;
+            font-size: 14px;
+        }
+        
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        a:hover {
+            color: var(--text-hov-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Menu</li>
+                </a>
+                <a href="#">
+                    <li>About</li>
+                </a>
+                <a href="#">
+                    <li>Contact us</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+</body>
+
+</html>
