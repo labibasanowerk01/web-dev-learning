@@ -14,14 +14,16 @@
             position: relative;
             background-color: black;
         }
+        header {
+            position: sticky;
+            top: 0;
+        }
     .navbar {
         background-color: rgb(255, 107, 255);
         width: 100vw;
         height: 7vh;
-        position: fixed;
-        top: 0px;
     }
-    .main {
+    .container {
         background-color: green;
         height: 70vh;
         width: 90vw;
@@ -32,7 +34,7 @@
         justify-content: center;
         align-items: center;
     }
-    .main span {
+    .container span {
         display: inline-flex;
         background-color: cyan;
         height: 35em;
@@ -47,11 +49,12 @@
         justify-content: center;
     }
     .sec2 img {
-    height: 80px;
-    width: 80px;
-    right: 7vw;
+    height: 50px;
+    width: 50px;
+    right: 23px;
     position: fixed;
-    bottom: 15vw;
+    bottom: 23px;
+    border-radius: 60px;
     }
     .box {
         border: 2px solid white;
@@ -71,17 +74,19 @@
     .footer {
          width: 100vw;
         height: 7vh;
-        background-color: white;
+        background-color: rgb(242, 238, 214);
     }
 
     </style>
 </head>
 
 <body>
-    <div class="navbar">
+    <header>
+      <div class="navbar">
 
     </div>
-    <div class="main">
+    </header>
+    <div class="container">
         <span>
 
         </span>
