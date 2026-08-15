@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Task 4-Ultra Edit navbar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav {
+            display: flex;
+            width: 60vw;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
+        
+        .left {
+            display: flex;
+            width: 30vw;
+            margin: 2rem;
+            gap: 5px;
+            position: relative;
+        }
+        
+        .right {
+            width: 30vw;
+            margin: 2rem;
+            font-size: 13px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            color: gray;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        .left img {
+            align-items: flex-start;
+        }
+
+        .left p {
+            position: absolute;
+            top: 34px;
+            left: 46px;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <img src="#" alt="logo">
+                <h1>UltraEdit</h1>
+                <p>An idea inc. company</p>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Products</li>
+                    <li>Pricing</li>
+                    <li>Resourses</li>
+                    <li>About us</li>
+                    <li><img src="#" alt="lang-icon"></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>
