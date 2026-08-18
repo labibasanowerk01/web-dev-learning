@@ -4,37 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Task 5-Ultra Edit body</title>
+    <title>CSS Task 5-Ultra Edit webpage</title>
     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+
         * {
             margin: 0;
             padding: 0;
         }
-        
-        main {
+
+        body {
+            height: 145vh;
+        }
+
+        header {
             display: flex;
-             justify-content: center;
+            justify-content: center;
+
+        }
+
+        nav {
+            display: flex;
+            width: 60vw;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
+
+        .left {
+            display: flex;
+            width: 30vw;
+            margin: 2rem;
+            gap: 5px;
+            position: relative;
+        }
+
+        .right {
+            width: 30vw;
+            margin: 2rem;
+            font-size: 13px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            color: gray;
+        }
+
+        nav ul li {
+            list-style: none;
+            cursor: pointer;
+        }
+        nav ul li:hover{
+            transform: scale(1.1) ;
+            color: rgb(201, 200, 200);
+        }
+        .left img {
+            align-items: flex-start;
+            cursor: pointer;
+        }
+
+
+
+        main {
+            display: grid;
+            justify-content: center;
         }
 
         .top {
             height: 25vh;
-            width: 60vw;
-            padding: 8px;
-            margin: 3rem;
+            width: 40vw;
             text-align: center;
-            transform: translateY(30%);
+            transform: translateY(15%);
             font-family: 'Poppins', sans-serif;
             position: relative;
+            place-self: center;
         }
+
         .top h1 {
             margin: 25px;
             font-weight: 400;
+            font-size: 2rem;
         }
+
         .top p {
             margin: 25px;
             color: grey;
         }
+
         .top button {
             padding: 20px;
             color: white;
@@ -45,17 +103,121 @@
             display: flex;
             align-items: center;
             position: absolute;
-            left: 35%;
+            justify-self: center;
             font-weight: 400;
+            cursor: pointer;
         }
+        .top button:hover {
+            background-color: rgb(84, 191, 233);
+        }
+
+        .body {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            grid-template-rows: repeat(3, 30%);
+            place-content: center;
+            margin-top: 10em;
+            row-gap: 20px;
+            column-gap: 20px;
+
+        }
+
         .card {
-            height: 3rem;
-            width: 2rem;
+            height: 10rem;
+            width: 16rem;
+            background-color: rgb(247, 247, 247);
+            text-align: center;
+            padding: 5px;
+            position: relative;
+            border-radius: 3px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card h2 {
+            margin: 1rem;
+            font-size: 20px;
+        }
+
+        .lang {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1rem;
+            border: none;
+            border-radius: 3px;
+            background-color: rgb(92, 209, 255);
+            color: white;
+            padding: 8px;
+            font-size: 12px;
+            width: 7rem;
+            cursor: pointer;
+        }
+        .lang:hover {
+            background-color: rgb(84, 191, 233);
+
+        }
+
+        .lang-2 {
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1rem;
+            border: none;
+            border-radius: 3px;
+            background-color: rgb(80, 186, 80);
+            color: white;
+            font-size: 12px;
+            padding: 8px;
+            width: 7rem;
+            cursor: pointer;
+        }
+        .lang-2:hover{
+            background-color: rgb(70, 164, 70);
+        }
+
+        .card-1,
+        .card-4,
+        .card-7 {
+            justify-self: flex-end;
+        }
+
+        .card-3,
+        .card-6,
+        .card-9 {
+            justify-self: flex-start;
+        }
+
+        .card-2,
+        .card-5,
+        .card-8 {
+            justify-self: center;
+        }
+
+        .desc {
+            color: gray;
+            position: absolute;
+            font-size: 10px;
+            align-self: center;
+            justify-self: center;
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="left">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-logo.svg" alt="logo">
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Products</li>
+                    <li>Pricing</li>
+                    <li>Resourses</li>
+                    <li>About us</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="top">
             <h1>Download <strong>UltraEdit</strong> for Windows</h1>
@@ -63,11 +225,60 @@
                 editor.</p>
             <button>DOWNLOAD MAC OR LINUX VERSION</button>
         </div>
-    <div class="body">
-        <div class="card">
-            <h2>English</h2>
-            <button class="lang">Download 32-bit</button>
-            <button class="lang-2">Download 64-bit</button>
+        <div class="body">
+            <div class="card card-1">
+                <h2>English</h2>
+                <button class="lang">Download 32-bit</button>
+                <button class="lang-2">Download 64-bit</button>
+            </div>
+            <div class="card card-2">
+                <h2>Deutsch</h2>
+                <p class="desc">German</p>
+                <button class="lang">Download 32-bit</button>
+                <button class="lang-2">Download 64-bit</button>
+            </div>
+            <div class="card card-3">
+                <h2>Italiano</h2>
+                <p class="desc">Italian</p>
+                <button class="lang">Download 32-bit</button>
+                <button class="lang-2">Download 64-bit</button>
+            </div>
+            <div class="card card-4">
+                <h2>Español</h2>
+                <p class="desc">Spanish</p>
+                <button class="lang">Download 32-bit</button>
+                <button class="lang-2">Download 64-bit</button>
+            </div>
+            <div class="card card-5">
+                <h2>Português</h2>
+                <p class="desc">Potugese (Brazil)</p>
+                <button class="lang">Download 32-bit</button>
+                <button class="lang-2">Download 64-bit</button>
+            </div>
+            <div class="card card-6">
+                <h2>日本語</h2>
+                <p class="desc">Japanese</p>
+                <button class="lang">Download 32-bit</button>
+                <button class="lang-2">Download 64-bit</button>
+            </div>
+            <div class="card card-7">
+                <h2>한국어</h2>
+                <p class="desc">Korean</p>
+                <button class="lang">Download 32-bit</button>
+                <button class="lang-2">Download 64-bit</button>
+            </div>
+            <div class="card card-8">
+                <h2>简体中文</h2>
+                <p class="desc">Chinese Simplified</p>
+                <button class="lang">Download 32-bit</button>
+                <button class="lang-2">Download 64-bit</button>
+            </div>
+            <div class="card card-9">
+                <h2>Français</h2>
+                <p class="desc">French</p>
+                <button class="lang">Download 32-bit</button>
+                <button class="lang-2">Download 64-bit</button>
+            </div>
         </div>
     </main>
 </body>
