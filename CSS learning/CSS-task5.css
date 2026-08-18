@@ -1,0 +1,198 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 145vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav {
+            display: flex;
+            width: 60vw;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
+
+        .left {
+            display: flex;
+            width: 30vw;
+            margin: 2rem;
+            gap: 5px;
+            position: relative;
+        }
+
+        .right {
+            width: 30vw;
+            margin: 2rem;
+            font-size: 13px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            color: gray;
+        }
+
+        nav ul li {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        nav ul li:hover {
+            transform: scale(1.1);
+            color: rgb(201, 200, 200);
+        }
+
+        .left img {
+            align-items: flex-start;
+            cursor: pointer;
+        }
+
+
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .top {
+            height: 25vh;
+            width: 40vw;
+            text-align: center;
+            transform: translateY(15%);
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            place-self: center;
+        }
+
+        .top h1 {
+            margin: 25px;
+            font-weight: 400;
+            font-size: 2rem;
+        }
+
+        .top p {
+            margin: 25px;
+            color: grey;
+        }
+
+        .top button {
+            padding: 20px;
+            color: white;
+            background-color: rgb(92, 209, 255);
+            border: none;
+            border-radius: 5px;
+            height: 1.5vh;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            justify-self: center;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .top button:hover {
+            background-color: rgb(84, 191, 233);
+        }
+
+        .body {
+            display: grid;
+            grid-template-columns: 16em 16em 16em;
+            place-items: center;
+            margin-top: 10em;
+            gap: 30px;
+
+        }
+
+        .card {
+            height: 10rem;
+            width: 16rem;
+            background-color: rgb(247, 247, 247);
+            text-align: center;
+            padding: 5px;
+            position: relative;
+            border-radius: 3px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card h2 {
+            margin: 1rem;
+            font-size: 20px;
+        }
+
+        .lang {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1rem;
+            border: none;
+            border-radius: 3px;
+            background-color: rgb(92, 209, 255);
+            color: white;
+            padding: 8px;
+            font-size: 12px;
+            width: 7rem;
+            cursor: pointer;
+        }
+
+        .lang:hover {
+            background-color: rgb(84, 191, 233);
+
+        }
+
+        .lang-2 {
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1rem;
+            border: none;
+            border-radius: 3px;
+            background-color: rgb(80, 186, 80);
+            color: white;
+            font-size: 12px;
+            padding: 8px;
+            width: 7rem;
+            cursor: pointer;
+        }
+
+        .lang-2:hover {
+            background-color: rgb(70, 164, 70);
+        }
+
+        .desc {
+            color: gray;
+            position: absolute;
+            font-size: 10px;
+            align-self: center;
+            justify-self: center;
+        }
+
+        @media screen and (max-width:950px) {
+            .body{
+                height: 150vh;
+            }
+            .body {
+                display: grid;
+                place-items: center;
+                grid-template-columns: 1fr;
+            }
+             .top {
+            height: 40vh;
+            width: 40vw;
+            text-align: center;
+            transform: translateY(15%);
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            place-self: center;
+        }
+    }
