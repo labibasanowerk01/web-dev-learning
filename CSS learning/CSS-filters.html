@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        /* img {
+            filter: blur(10px);
+        } */
+         .img-1 {
+            /* filter: brightness(200%) contrast(1.5); */
+            filter: hue-rotate(174deg) drop-shadow(20px 20px 100px blue);
+         }
+         .img-2 {
+            /* filter: grayscale(80%); */
+            filter: invert(100%);
+         }
+         .img-3 {
+            /* filter: sepia(50%) opacity(0.5); */
+            filter: saturate(1.3);
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgzkgm_g-IVVEGKi7y1BoZ3lZTew9zA7HJ0yuxcK9w5v2d4eSUksxUuw53&s=10" alt="">
+        <img class="img-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlPEkod1EBvxH3Qr-_thZyGf6go5mnt9BamvQamwv4DHY_OYBYEwGjIKYY&s=10" alt="">
+        <img class="img-3" src="https://i.pinimg.com/originals/84/13/a9/8413a9ad915e10f12b5e54ab569053a4.jpg" alt="" >
+    </div>
+</body>
+</html>
