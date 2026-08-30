@@ -14,7 +14,7 @@ body {
     background-image: url("assets/images/bg.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: max(1500px, 100vw);
+    background-size: max(2000px, 100vw);
     height: 80vh;
     position: relative;
 }
@@ -54,7 +54,6 @@ nav button {
 
 .content {
     font-family: 'Martel Sans', sans-serif;
-    height: calc(100% - 100px);
     max-width: 41.5rem;
     display: flex;
     align-items: center;
@@ -81,7 +80,7 @@ nav button {
     text-align: center;
 }
 
-.content> :nth-child(3) {
+.content .ready {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
@@ -125,8 +124,8 @@ nav button {
 
 }
 
-.gs-btn {
-    padding: 6px 40px;
+.gs-btn1 {
+    padding: 7px 40px;
     margin: 8px;
     font-size: 1.5rem;
     font-weight: 600;
@@ -137,7 +136,7 @@ nav button {
     border: none;
 }
 
-.main input {
+.main .emailbox {
     width: 350px;
     padding: 16px;
     border-radius: 5px;
@@ -157,12 +156,13 @@ nav button {
     align-items: center;
     color: white;
     max-width: 70vw;
+    /* flex-wrap: wrap; */
 }
 
 .sec>div {
     display: flex;
     flex-direction: column;
-    padding: 40px 0;
+    padding: 50px 0;
 }
 
 .sec-1-img {
@@ -170,14 +170,17 @@ nav button {
 }
 
 .sec-1-img img {
-    width: 35vw;
+    width: 100%;
+    max-width: 547px;
 
 }
 
 .sec-1-img video {
+    width: 90%;
+    max-width: 475px;
     position: absolute;
     top: 100px;
-    right: 0;
+    right: 1px;
     z-index: -1;
 }
 
@@ -190,4 +193,167 @@ nav button {
 .sec span:nth-child(2) {
     font-size: 20px;
     font-weight: 400;
+}
+
+.faq-sec {
+    margin: 3rem auto;
+    width: 80vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.faq-sec h2 {
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+    font-family: "Martel Sans";
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.faq-box {
+    transition: all 0.25s ease-in;
+    background-color: rgb(47, 47, 47);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    width: 45vw;
+    height: 4rem;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Martel Sans";
+}
+
+.faq-box:hover {
+    background-color: rgb(74, 74, 74);
+}
+
+.content2 {
+    font-family: 'Martel Sans', sans-serif;
+    height: calc(100% - 100px);
+    max-width: 41.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    top: 70px;
+    padding: 0 30px;
+    gap: 0.5rem;
+    position: relative;
+    top: 25px;
+}
+
+.emailbox {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(163, 163, 163);
+    box-sizing: border-box;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: rgba(23, 23, 23, 0.8);
+    color: white;
+}
+
+.gs-btn {
+    padding: 7px 20px;
+    margin: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Martel Sans";
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+footer {
+    margin: auto;
+    max-width: 60vw;
+    color: rgb(185, 184, 184);
+    padding: 40px;
+}
+
+.foot-txt {
+    padding: 25px 0;
+}
+
+.foot-txt2 {
+    padding: 25px 0;
+    color: rgb(145, 145, 145);
+    font-size: 13px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 14px;
+}
+
+.footer a {
+    color: rgb(185, 184, 184);
+}
+
+.foot-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+    nav {
+        max-width: 55vw;
+        display: flex;
+        align-items: center;
+    }
+
+    nav img {
+        width: 4rem;
+        margin: 8px;
+    }
+
+
+    .sign-in {
+        margin: 8px;
+        font-size: 10px;
+    }
+
+    .content {
+        max-width: 10rem;
+        top: 40px;
+    }
+
+    .content> :nth-child(1) {
+        font-size: 30px;
+    }
+
+    .content> :nth-child(2) {
+        font-size: 10px;
+    }
+
+    .sec {
+        flex-wrap: wrap;
+    }
+
+    .sec div {
+        text-align: center;
+    }
+
+    .sec-1-img img {
+        width: 329px;
+
+    }
+
+    .sec-1-img video {
+        width: 356px;
+    }
 }
