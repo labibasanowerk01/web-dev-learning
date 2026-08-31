@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins";
+    box-sizing: border-box;
 }
 
 body {
@@ -14,14 +15,16 @@ body {
     background-image: url("assets/images/bg.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: max(2000px, 100vw);
+    background-size: cover;
     height: 80vh;
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .main .box {
-    height: 80vh;
     width: 100%;
+    height: 80vh;
     position: absolute;
     top: 0;
     background-color: rgba(0, 0, 0, 0.69);
@@ -38,7 +41,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 45px 0;
 }
 
 nav img {
@@ -125,7 +128,7 @@ nav button {
 }
 
 .gs-btn1 {
-    padding: 7px 40px;
+    padding: 6px 16px;
     margin: 8px;
     font-size: 1.5rem;
     font-weight: 600;
@@ -137,7 +140,7 @@ nav button {
 }
 
 .main .emailbox {
-    width: 350px;
+    width: 370px;
     padding: 16px;
     border-radius: 5px;
     border: 1px solid rgb(163, 163, 163);
@@ -176,11 +179,11 @@ nav button {
 }
 
 .sec-1-img video {
-    width: 90%;
-    max-width: 475px;
+    width: 80%;
+    max-width: 100%;
     position: absolute;
-    top: 100px;
-    right: 1px;
+    top: 25%;
+    right: 12%;
     z-index: -1;
 }
 
@@ -265,7 +268,7 @@ nav button {
 }
 
 .gs-btn {
-    padding: 7px 20px;
+    padding: 6px 20px;
     margin: 8px;
     font-size: 1.2rem;
     font-weight: 600;
@@ -279,7 +282,7 @@ nav button {
 footer {
     margin: auto;
     max-width: 60vw;
-    color: rgb(185, 184, 184);
+    color: rgb(222, 222, 222);
     padding: 40px;
 }
 
@@ -300,7 +303,7 @@ footer {
 }
 
 .footer a {
-    color: rgb(185, 184, 184);
+    color: rgb(222, 222, 222);
 }
 
 .foot-cont {
@@ -310,10 +313,17 @@ footer {
 }
 
 @media screen and (max-width: 1300px) {
+    .main {
+        width: 100%;
+    }
+
     nav {
-        max-width: 55vw;
+        max-width: 80vw;
         display: flex;
         align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin: auto;
     }
 
     nav img {
@@ -327,9 +337,21 @@ footer {
         font-size: 10px;
     }
 
+    .main .box {
+        width: 100%;
+    }
+
     .content {
-        max-width: 10rem;
+
         top: 40px;
+        height: 80vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .content> :nth-child(1) {
@@ -340,6 +362,23 @@ footer {
         font-size: 10px;
     }
 
+    .cont-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main .emailbox {
+        width: 205px;
+        padding: 9px;
+        font-size: 0.5rem;
+    }
+
+    .gs-btn1 {
+        padding: 8px 7px;
+        font-size: 0.6rem;
+        border-radius: 2px;
+    }
+
     .sec {
         flex-wrap: wrap;
     }
@@ -348,12 +387,74 @@ footer {
         text-align: center;
     }
 
+    .sec-1-img {
+        padding: 25px;
+    }
+
     .sec-1-img img {
-        width: 329px;
+        width: 100%;
 
     }
 
     .sec-1-img video {
-        width: 356px;
+        width: 75%;
+        top: 30%;
+    }
+
+   .sec-3 .sec-1-img .vid2 {
+        width: 85%;
+        top: 26%;
+    }
+
+    .sec span:first-child {
+        font-weight: bold;
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+
+
+    .sec span:nth-child(2) {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .faq-sec {
+        width: 90%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 8px;
+        margin: 2rem;
+    }
+
+    .faq-sec h2 {
+        font-size: 16px;
+    }
+
+    .faq-box {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .content2 {
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .cont-buttons {
+        justify-content: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .gs-btn {
+        margin: 0;
+    }
+
+    footer {
+        max-width: 100%;
+    }
+
+    .footer {
+        display: block;
     }
 }
