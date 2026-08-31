@@ -96,7 +96,7 @@ nav button {
     z-index: 10;
 }
 
-.cont-buttons {
+.cont-buttons1 {
     display: flex;
     align-items: center;
 }
@@ -374,7 +374,7 @@ footer {
     }
 
     .gs-btn1 {
-        padding: 8px 7px;
+        padding: 7px 7px;
         font-size: 0.6rem;
         border-radius: 2px;
     }
