@@ -444,6 +444,7 @@ footer {
         justify-content: flex-start;
         gap: 10px;
         width: 100%;
+        display: flex;
     }
 
     .gs-btn {
