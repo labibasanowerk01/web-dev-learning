@@ -10,5 +10,39 @@ button.addEventListener("contextmenu", () => {
 })
 
 document.addEventListener("keydown", (e) => {
-    alert(e.key + ' ' + e.code);
+    console.log(e.key, e.code);
 })
+
+document.querySelector('.container-2').addEventListener("click", () => {
+    alert('Container-2 was clicked');
+})
+
+document.querySelector('.childcontainer').addEventListener("click", (e) => {
+    alert('Child container was clicked');
+    e.stopPropagation()
+})
+
+document.querySelector('.child').addEventListener("click", (e) => {
+    alert('Child was clicked');
+    e.stopPropagation()
+})
+
+let colors = ['blue', 'red', 'pink', 'purple', 'gray'];
+
+
+function bgcolor() {
+    let box = document.querySelector('.child');
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    box.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+}
+
+// setInterval(() => {
+//     bgcolor()
+// }, 1000);
+
+
+setTimeout(() => {
+    bgcolor()
+}, 1000);
