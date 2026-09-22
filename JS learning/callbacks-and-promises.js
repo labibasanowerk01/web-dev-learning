@@ -79,3 +79,11 @@ console.log(prom5);
 prom6.catch((err)=>{
     console.log(err)
 })
+
+let prom7 = Promise.race([prom1,prom2])
+
+prom7.then((a)=>{
+    console.log(a)
+}).catch((err)=>{
+    console.log(err)
+})
