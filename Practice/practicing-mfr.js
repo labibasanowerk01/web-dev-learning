@@ -123,7 +123,7 @@ let customerbase = Array.from(completedOrders.map(order => order.amount, 0));
 console.log(customerbase);
 
 const results = orders.reduce((acc, order) => {
-    acc[order.status] = (acc[order.status] || 0) + order.amount;
+    acc[order.status] = (acc[order.status] || 0) + 1;
     acc.total += order.amount;
     return acc;
 }, { completed: 0, 
