@@ -47,23 +47,40 @@
 
 // main();
 
-async function login () {
+// async function login () {
+//     return new Promise((resolve) => {
+//     setTimeout(() => {
+//         resolve("Login successful");
+//     }, 1000);
+// })}
+
+// async function getProfile () {
+//     const loginMessage = await login();
+//     console.log(loginMessage);
+//     return "Profile loaded";
+// }
+
+// async function getPosts () {
+//     const profileMessage = await getProfile();
+//     console.log(profileMessage);
+//     return "Posts loaded";
+// }
+
+// getPosts().then(console.log);
+
+async function start () {
     return new Promise((resolve) => {
-    setTimeout(() => {
-        resolve("Login successful");
-    }, 1000);
-})}
-
-async function getProfile () {
-    const loginMessage = await login();
-    console.log(loginMessage);
-    return "Profile loaded";
+        setTimeout(() => {
+            resolve("Start");
+        }, 2000);
+    });
 }
 
-async function getPosts () {
-    const profileMessage = await getProfile();
-    console.log(profileMessage);
-    return "Posts loaded";
+async function process () {
+    const startMessage = await start();
+    console.log(`${startMessage}`);
+    console.log("Waited 2 seconds");
+    return "Process completed";
 }
 
-getPosts().then(console.log);
+process().then(console.log);
