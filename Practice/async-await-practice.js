@@ -84,3 +84,22 @@ async function process () {
 }
 
 process().then(console.log);
+
+
+function getUser() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve({
+        id: 1,
+        name: "Rahim",
+        age: 22
+      });
+    }, 1000);
+  });
+}
+
+async function showUser() {   
+  const user = await getUser();
+  console.log(`${user.name}, ${user.age}`);
+}
+showUser();
