@@ -103,3 +103,14 @@ async function showUser() {
   console.log(`${user.name}, ${user.age}`);
 }
 showUser();
+
+
+async function multiply(a, b) {
+  return a * b;
+}
+
+async function main() {
+  const result = await multiply(5, 4);
+  console.log(result);
+}
+main();
