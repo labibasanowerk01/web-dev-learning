@@ -114,3 +114,15 @@ async function main() {
   console.log(result);
 }
 main();
+
+function getNumber() {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(100), 1000);
+  });
+}
+
+async function printNum() {
+  const num = await getNumber();
+  console.log(num);
+}
+printNum();
