@@ -126,3 +126,13 @@ async function printNum() {
   console.log(num);
 }
 printNum();
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function greet() {
+  await delay(2000);
+  return "Hello, World!"; 
+}
+greet().then(console.log);
