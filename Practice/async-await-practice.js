@@ -136,3 +136,21 @@ async function greet() {
   return "Hello, World!"; 
 }
 greet().then(console.log);
+
+function wait() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Done!"), 1000);
+  });
+}
+
+async function main() {
+  console.log("Start");
+
+  const result = await wait();
+
+  console.log(result);
+  console.log("End");
+}
+
+main();
+console.log("Outside");
