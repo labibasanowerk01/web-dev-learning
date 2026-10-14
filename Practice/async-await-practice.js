@@ -154,3 +154,17 @@ async function main() {
 
 main();
 console.log("Outside");
+
+async function getdata() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Data received");
+    }, 1000);
+  });
+}
+
+async function showData() {
+  const data = await getdata();
+  console.log(data);
+}
+showData();
