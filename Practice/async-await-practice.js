@@ -168,3 +168,17 @@ async function showData() {
   console.log(data);
 }
 showData();
+
+function getNumber() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(100), 1000);
+  });
+}
+
+async function  showNumber() {
+  const num = await getNumber();
+  return num * 2;
+}
+
+const result = showNumber();
+result.then(console.log);
