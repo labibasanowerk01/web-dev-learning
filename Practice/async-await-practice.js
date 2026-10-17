@@ -206,3 +206,18 @@ async function task3() {
 }
 
 task3().then(console.log);
+
+async function getUser() {
+  try {
+   const response = fetch("https://jsonplaceholder.typicode.com/users/1")
+      .then(response => response.json())
+      .then(data => console.log(data.id, data.name, data.email));
+  
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+} catch (error) {
+    console.error("Error", error.message);
+  }}
+
+  getUser();
