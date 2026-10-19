@@ -223,18 +223,24 @@ task3().then(console.log);
 //   getUser();
 
 
-async function getPosts() {
-  try {
-    const response = fetch("https://jsonplaceholder.typicode.com/posts/1")
-    .then(response => response.json())
-    .then(data => console.log(data.title, data.body));
+// async function getPosts() {
+//   try {
+//     const response = fetch("https://jsonplaceholder.typicode.com/posts/1")
+//     .then(response => response.json())
+//     .then(data => console.log(data.title, data.body));
 
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
+//     if (!response.ok) {
+//       throw new Error("Network response was not ok");
+//     }
 
-  } catch (error) {
-    console.error("Error", error.message);
-  }
+//   } catch (error) {
+//     console.error("Error", error.message);
+//   }
+// }
+// getPosts();
+
+alert(Number(prompt("Enter id")));
+
+async function getPost() {
+  
 }
-getPosts();
