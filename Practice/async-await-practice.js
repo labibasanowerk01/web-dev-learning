@@ -239,8 +239,17 @@ task3().then(console.log);
 // }
 // getPosts();
 
-alert(Number(prompt("Enter id")));
+async function getUser() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users/3")
+    .then(response => response.json())
+    .then(data => console.log(data.name, data.email));
 
-async function getPost() {
-  
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+  } catch (error) {
+    console.error("Error", error.message);
+  }
 }
+getUser();
