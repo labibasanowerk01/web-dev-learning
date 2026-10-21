@@ -239,17 +239,36 @@ task3().then(console.log);
 // }
 // getPosts();
 
-async function getUser() {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users/3")
-    .then(response => response.json())
-    .then(data => console.log(data.name, data.email));
+// async function getUser() {
+//   try {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users/3")
+//     .then(response => response.json())
+//     .then(data => console.log(data.name, data.email));
 
+//     if (!response.ok) {
+//       throw new Error("Network response was not ok");
+//     }
+//   } catch (error) {
+//     console.error("Error", error.message);
+//   }
+// }
+// getUser();
+
+let btn = document.querySelector(".ga");
+btn.addEventListener("click", getActivity);
+
+let activity = document.querySelector(".act");
+
+async function getActivity() {
+  try {
+    const response = await fetch("https://bored-api.appbrewery.com/random");
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
+    const data = await response.json();
+    activity.textContent = data.activity;
   } catch (error) {
+    activity.textContent = "Failed to load the activity.Try again!";
     console.error("Error", error.message);
   }
 }
-getUser();
