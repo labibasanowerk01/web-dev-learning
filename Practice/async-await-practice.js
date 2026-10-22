@@ -272,3 +272,27 @@ async function getActivity() {
     console.error("Error", error.message);
   }
 }
+
+
+const postids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+async function getPostDetails() {
+  try {
+    const posts = await Promise.all(
+      postids.map(async (id) => {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+    );
+    posts.forEach((post) => {
+      console.log(`Title: ${post.title}, Body: ${post.body}`);
+    });
+  } catch (error) {
+    console.error("Error", error.message);
+  }
+}
+
+getPostDetails();
