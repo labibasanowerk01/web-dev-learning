@@ -274,25 +274,58 @@ async function getActivity() {
 }
 
 
-const postids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const postids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-async function getPostDetails() {
+// async function getPostDetails() {
+//   try {
+//     const posts = await Promise.all(
+//       postids.map(async (id) => {
+//         const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+//         if (!response.ok) {
+//           throw new Error("Network response was not ok");
+//         }
+//         return response.json();
+//       })
+//     );
+//     posts.forEach((post) => {
+//       console.log(`Title: ${post.title}, Body: ${post.body}`);
+//     });
+//   } catch (error) {
+//     console.error("Error", error.message);
+//   }
+// }
+
+// getPostDetails();
+
+
+let country = prompt('Enter a country name');
+
+async function getcountry() {
   try {
-    const posts = await Promise.all(
-      postids.map(async (id) => {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
+    if (!country || !country.trim()) {
+      throw new Error("Please enter a country name");
+    }
+
+    const response = await fetch(
+      `https://restcountries.com/v3.1/name/${encodeURIComponent(country.trim())}`
     );
-    posts.forEach((post) => {
-      console.log(`Title: ${post.title}, Body: ${post.body}`);
-    });
+
+    if (!response.ok) {
+      throw new Error("Country not found");
+    }
+
+    const data = await response.json();
+    const result = data[0];
+
+    console.log(`Capital: ${result.capital?.[0] ?? "N/A"}`);
+    console.log(`Flag: ${result.flag}`);
+    console.log(`Population: ${result.population}`);
+    console.log(`Region: ${result.region}`);
+
   } catch (error) {
-    console.error("Error", error.message);
+    console.log("Error:", error.message);
   }
 }
 
-getPostDetails();
+getcountry();
+
