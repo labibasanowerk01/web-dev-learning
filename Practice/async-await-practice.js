@@ -298,34 +298,51 @@ async function getActivity() {
 // getPostDetails();
 
 
-let country = prompt('Enter a country name');
+// let country = prompt('Enter a country name');
 
-async function getcountry() {
+// async function getcountry() {
+//   try {
+//     if (!country || !country.trim()) {
+//       throw new Error("Please enter a country name");
+//     }
+
+//     const response = await fetch(
+//       `https://restcountries.com/v3.1/name/${encodeURIComponent(country.trim())}`
+//     );
+
+//     if (!response.ok) {
+//       throw new Error("Country not found");
+//     }
+
+//     const data = await response.json();
+//     const result = data[0];
+
+//     console.log(`Capital: ${result.capital?.[0] ?? "N/A"}`);
+//     console.log(`Flag: ${result.flag}`);
+//     console.log(`Population: ${result.population}`);
+//     console.log(`Region: ${result.region}`);
+
+//   } catch (error) {
+//     console.log("Error:", error.message);
+//   }
+// }
+
+// getcountry();
+
+async function comptodos() {
   try {
-    if (!country || !country.trim()) {
-      throw new Error("Please enter a country name");
-    }
-
-    const response = await fetch(
-      `https://restcountries.com/v3.1/name/${encodeURIComponent(country.trim())}`
-    );
-
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos?completed=true");
     if (!response.ok) {
-      throw new Error("Country not found");
+      throw new Error("Network response was not ok");
     }
 
-    const data = await response.json();
-    const result = data[0];
-
-    console.log(`Capital: ${result.capital?.[0] ?? "N/A"}`);
-    console.log(`Flag: ${result.flag}`);
-    console.log(`Population: ${result.population}`);
-    console.log(`Region: ${result.region}`);
-
+    const todos = await response.json();
+    const completedTodos = todos.filter((todo) => todo.completed === true);
+    console.log('Total number of completed todos : ' + completedTodos.length);
+    return completedTodos;
   } catch (error) {
-    console.log("Error:", error.message);
+    console.error("Error fetching completed todos:", error.message);
   }
 }
 
-getcountry();
-
+comptodos();
