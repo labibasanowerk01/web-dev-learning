@@ -348,17 +348,36 @@ async function comptodos() {
 comptodos();
 
 
-async function getUser() {
+// async function getUser() {
+//   try {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+
+//     if (!response.ok) {
+//       throw new Error("Network response was not ok");
+//     }
+
+//     const data = await response.json();
+//     console.log(`${data.name} + ${data.email}`);
+//   } catch (error) {
+//     console.log("Error: " + error.message);
+//   }
+// }
+
+const joke = document.querySelector('.jk')
+
+joke.addEventListener('click',rdJoke)
+
+const jktext = document.querySelector('.jkt')
+
+async function rdJoke() {
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
-
+    const response = await fetch('https://official-joke-api.appspot.com/random_joke')
     if (!response.ok) {
-      throw new Error("Network response was not ok");
+      throw new Error('Network response was not ok!')
     }
-
-    const data = await response.json();
-    console.log(`${data.name} + ${data.email}`);
+    const data = await response.json()
+    jktext.textContent = `${data.setup} ${data.punchline}`
   } catch (error) {
-    console.log("Error: " + error.message);
+    console.log('Error: ' + error.message)
   }
 }
