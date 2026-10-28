@@ -381,3 +381,42 @@ async function rdJoke() {
     console.log('Error: ' + error.message)
   }
 }
+
+
+const lpbtn = document.querySelector('.loadposts');
+const lp = document.querySelector('.loadbox');
+
+if (lpbtn) {
+  lpbtn.addEventListener('click', loadPosts);
+}
+
+async function loadPosts() {
+  try {
+    const postIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    const posts = await Promise.all(
+      postIds.map(async (id) => {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        return response.json();
+      })
+    );
+
+    if (lp) {
+      lp.innerHTML = `
+        <p>Total posts loaded: ${posts.length}</p>
+        ${posts.map((post) => `<p>${post.id}. ${post.title}`).join('')}
+      `;
+    }
+  } catch (error) {
+    console.error('Error: ' + error.message);
+
+    if (lp) {
+      lp.innerHTML = '<p>Failed to load posts.</p>';
+    }
+  }
+}
