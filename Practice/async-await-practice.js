@@ -420,3 +420,14 @@ async function loadPosts() {
     }
   }
 }
+
+const users = [
+  { id: 1, name: "Rahim" },
+  { id: 2, name: "Karim" },
+  { id: 3, name: "Sakib" }
+];
+
+ let usernames =  users.map(user=> user.name)
+
+ console.log(usernames);
+ 
