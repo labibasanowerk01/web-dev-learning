@@ -438,3 +438,11 @@ const users = [
 
  console.log(even);
  
+
+ const nums = [10, 5, 25, 8, 40, 15];
+
+let red = nums.reduce((a,b)=> {if(a>b)
+  return a; return b;
+})
+
+console.log(red);
