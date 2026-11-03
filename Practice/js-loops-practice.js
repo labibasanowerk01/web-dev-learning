@@ -18,3 +18,20 @@ for (let i=0; i < 100; i++) {
     }
 }
 console.log(evenSum);
+
+const car = {
+  brand: "Toyota",
+  model: "Corolla",
+  year: 2022,
+  color: "Black"
+};
+
+for (let value in car) {
+    console.log(car[value]);
+}
+
+const user = {name: "Karim", age: 25, country: "Bangladesh"};
+
+for (let key in user) {
+    console.log(`${key}: ${user[key]}`);
+}
