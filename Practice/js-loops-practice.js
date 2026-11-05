@@ -35,3 +35,9 @@ const user = {name: "Karim", age: 25, country: "Bangladesh"};
 for (let key in user) {
     console.log(`${key}: ${user[key]}`);
 }
+
+const students = ["Rahim", "Karim", "Sakib", "Nabil"];
+
+students.forEach(student => {
+    console.log(`${students.indexOf(student)} ${student}`);
+});
