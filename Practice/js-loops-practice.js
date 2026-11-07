@@ -41,3 +41,15 @@ const students = ["Rahim", "Karim", "Sakib", "Nabil"];
 students.forEach(student => {
     console.log(`${students.indexOf(student)} ${student}`);
 });
+
+let i = 1;
+while (i <= 10) {
+    console.log(i);
+    i++;
+}
+
+let e = 2;
+while (e <= 20 && e % 2 === 0) {
+    console.log(e);
+    e += 2;
+}
