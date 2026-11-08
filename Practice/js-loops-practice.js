@@ -53,3 +53,23 @@ while (e <= 20 && e % 2 === 0) {
     console.log(e);
     e += 2;
 }
+
+const student = {
+  name: "Rahim",
+  age: 20,
+  city: "Dhaka"
+};
+
+for (let key in student) {
+    console.log(key);
+}
+
+const person = {
+  name: "Karim",
+  age: 25,
+  job: "Developer"
+};
+
+for (let key in person) {
+    console.log(`${key}: ${person[key]}`);
+}
