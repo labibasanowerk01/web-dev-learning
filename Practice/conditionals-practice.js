@@ -62,3 +62,13 @@ if (ang1 <= 0 || ang2 <= 0 || ang3 <= 0) {
 } else {
     console.log("The angles do not form a valid triangle.");
 }
+
+let units = 235
+
+if (units <= 100) {
+    console.log("Your electricity bill is: " + (units * 5) )
+}else if (units <= 200) {
+    console.log("Your electricity bill is: " + (100 * 5 + (units - 100) * 7) )
+} else {
+    console.log("Your electricity bill is: " + (100 * 5 + 100 * 7 + (units - 200) * 10) )
+}
