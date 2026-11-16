@@ -72,3 +72,11 @@ if (units <= 100) {
 } else {
     console.log("Your electricity bill is: " + (100 * 5 + 100 * 7 + (units - 200) * 10) )
 }
+
+let num = 7
+
+if (num % 2 === 0) {
+    console.log(num + " is an even number.");
+} else {
+    console.log(num + " is an odd number.");
+}
