@@ -15,3 +15,13 @@ console.log(typeof obj);
 
 let value = undefined;
 console.log(typeof value);
+
+let price = '500';
+
+let quantity = '3';
+
+price = Number(price);
+quantity = Number(quantity);
+
+let total = price * quantity;
+console.log(total);
